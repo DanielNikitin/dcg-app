@@ -9,14 +9,14 @@ import { HiArrowRight } from 'react-icons/hi2';
 
 const ProjectsBtn = () => {
   return (
-    <div className='mx-auto xl:mx-12'>
+    <div className='mx-auto xl:mx-14'>
       {/* round button settings */}
       <Link 
-        href={'/work'} 
+        href={'/racing'} 
         className='relative w-[130px] h-[130px] flex justify-center items-center
         bg-circleStar bg-cover bg-center bg-no-repeat group'>
         <Image
-          src={'/rounded-text.png'}
+          src={'/rounded-text.svg'}
           width={100}
           height={100}
           alt=''

@@ -1,5 +1,5 @@
 // fonts
-import { Sora, Roboto } from '@next/font/google';
+import { Sora, Roboto, Copse } from '@next/font/google';
 
 // font settings
 const sora = Sora({
@@ -17,17 +17,17 @@ const roboto = Roboto({
 // components
 import Nav from '../components/Nav';
 import Header from '../components/Header';
-import TopLeftImg from '../components/TopLeftImg';
+import Copyright from './Copyright';
 
 const Layout = ({ children }) => {
   return (
 
 <div className={`page bg-site text-white bg-cover bg-no-repeat
                            ${roboto.variable} font-roboto relative`}>
-      <TopLeftImg />
       <Nav />
       <Header />
       {children}
+      <Copyright />
     </div>
   );
 };

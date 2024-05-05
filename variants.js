@@ -24,3 +24,68 @@ export const fadeIn = (direction, delay) => {
     },
   };
 };
+
+export const opacityPuls = (delay) => {
+  return {
+    hidden: {
+      opacity: 0,
+      transition: {
+        type: 'tween',
+        duration: 2,
+        delay: delay,
+      },
+    },
+    show: {
+      opacity: [0, 1, 0],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        delay: delay,
+      },
+    },
+  };
+};
+
+export const neonGlow = (delay) => {
+  return {
+    hidden: {
+      opacity: 0,
+      textShadow: '0px 0px 2px #fff, 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 40px #0ff',
+      color: 'transparent',
+      transition: {
+        type: 'spring',
+        stiffness: 1000,
+        damping: 500,
+        delay: delay,
+      },
+    },
+    show: {
+      opacity: 1,
+      textShadow: '0px 0px 2px #fff, 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 40px #0ff',
+      color: '#00ffff',
+      transition: {
+        type: 'spring',
+        stiffness: 1000,
+        damping: 500,
+        delay: delay,
+        repeat: Infinity,
+      },
+    },
+  };
+};
+
+export const opacity = {
+    hidden: {
+      opacity: 0,
+      transition: {
+        type: 'tween',
+        duration: 2,
+      },
+    },
+    show: {
+      opacity: [0, 1],
+      transition: {
+        duration: 2,
+      },
+    },
+  };

@@ -1,5 +1,0 @@
-xl:pt-10 - это класс Tailwind CSS, который задает 
-отступ сверху (pt - padding-top) элемента для разрешения экрана XL (extra large)
-
-small window (xl:hidden)
-normal window (xl:flex)

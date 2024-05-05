@@ -1,37 +1,37 @@
-// framer motion
 import { motion } from 'framer-motion';
 
-// variants
 const transitionVariants = {
   initial: {
-    x: '100%',
-    width: '100%'
+    opacity: 1,
   },
 
   animate: {
-    x: '0%',
-    width: '0%'
+    opacity: 0,
+    transition: {
+      duration: 0.2,
+      ease: 'easeInOut',
+    },
   },
 
   exit: {
-    x: ['0%', '100%'],
-    width: ['0%', '100%'],
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      ease: 'easeInOut',
+    },
   },
 };
 
-
 const Transition = () => {
   return (
-    <>
-      <motion.div
-       className='fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-[#8b8b8b]'
-       variants={transitionVariants} 
-       initial="initial" 
-       animate="animate"
-       exit="exit"
-       transition={{ delay: 0.01, duration: 0.3, ease: 'easeInOut' }}
-       ></motion.div>
-    </>
+    <motion.div
+      className='fixed top-0 bottom-0 right-0 left-0 w-screen h-screen z-20 bg-black'
+      variants={transitionVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      style={{ pointerEvents: 'none' }}
+    ></motion.div>
   );
 };
 
