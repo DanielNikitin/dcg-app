@@ -22,7 +22,7 @@ import Copyright from './Copyright';
 const Layout = ({ children }) => {
   return (
 
-<div className={`page bg-site text-white bg-cover bg-no-repeat
+<div className={`page bg-test_c text-white bg-cover bg-no-repeat
                            ${roboto.variable} font-roboto relative`}>
       <Nav />
       <Header />

@@ -1,6 +1,8 @@
 // variants
 import ProjectsBtn from '../components/ProjectsBtn';
+
 import { fadeIn } from '../variants';
+import { opacity } from '../variants';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -11,10 +13,15 @@ const Home = () => {
       {/* bg image */}
       <div className='w-full h-full absolute right-0 bottom-0'>
         {/* bg img fullscreen settings*/}
-        <div className='xl:bg-main bg-black bg-opacity-40 bg-blend-darken
+        <motion.div 
+        variants={opacity}
+        initial='hidden'
+        animate='show'
+        exit='hidden'
+        className='xl:bg-main bg-black bg-opacity-40 bg-blend-darken
          xl:bg-no-repeat w-full h-full absolute translate-z-0
          sm:bg-main_sm sm:bg-cover sm:bg-left sm:border-x-gray-400 sm:bg-no-repeat'>
-        </div>
+        </motion.div>
       </div>
       {/* text */}
       <div className='relative w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>

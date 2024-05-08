@@ -1,13 +1,22 @@
 import React from 'react';
 import ServiceSlider from '../../components/ServiceSlider';
 
+import { motion } from 'framer-motion';
+import { opacity } from '../../variants';
+
 const Racing = () => {
   return (
     <div className='w-full h-full bg-primary/30 py-32 text-center xl:text-left'>
       <div className='w-full h-full absolute right-0 bottom-0'>
-        <div className='xl:bg-about bg-black bg-opacity-70 bg-blend-darken 
+      <motion.div 
+        variants={opacity}
+        initial='hidden'
+        animate='show'
+        exit='hidden'
+        className='xl:bg-about bg-black bg-opacity-70 bg-blend-darken 
         xl:bg-cover xl:bg-left xl:bg-no-repeat w-full h-full absolute translate-z-0 
-        sm:bg-about_sm sm:bg-cover sm:bg-center sm:border-x-gray-400 sm:bg-no-repeat' />
+        sm:bg-about_sm sm:bg-cover sm:bg-center sm:border-x-gray-400 sm:bg-no-repeat'>
+      </motion.div>
       </div>
 
       <div className='relative container mx-auto 
