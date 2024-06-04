@@ -1,6 +1,3 @@
-npm run dev
-
-npm install next
-
-npm install @splidejs/react-splide @splidejs/splide
-https://splidejs.com/integration/react-splide/
+Daily Customs Garage
+Full-Stack Web Project based on React-Next JS
+https://dcg.ee
